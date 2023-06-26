@@ -1,0 +1,6 @@
+.panorama{
+    width: 500px;
+    height: 400px;
+    transform: rotate(45deg);
+    filter: drop-shadow(.90em .90em .5em);
+}

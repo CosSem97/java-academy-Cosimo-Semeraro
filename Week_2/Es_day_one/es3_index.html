@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Esercizio 3</title>
+    </head>
+
+    <body>
+        <!-- Titolo -->
+        <h1>Esercizio 3 --- Form</h1>
+
+        <!-- Quando si clicca sul bottone submit viene richiamata la funzione JavaScript stampaAlert() -->
+        <form action="prova.php" method="POST" onsubmit="stampaAlert()"> 
+            <div id="form-dati">
+                <fieldset>
+                    <legend>Dati utente</legend>
+    
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" style="margin-bottom: 9pt;">
+                    <br>
+    
+                    <label for="cognome">Cognome:</label>
+                    <input type="text" name="cognome" id="cognome" style="margin-bottom: 9pt;">
+                    <br>
+    
+                    <label for="email-address">Email:</label>
+                    <input type="email" name="email-address" id="email-address" style="margin-bottom: 9pt;" required>
+                    <br>
+    
+                    <label for="messaggio">Messaggio:</label>
+                    <br>
+                    <textarea name="messaggio" id="messaggio" placeholder="Inserisci un messaggio" style="margin-bottom: 9pt;"></textarea>
+                    <br>
+                </fieldset>
+            </div>
+
+            <div id="submit-reset">
+                <input type="submit" value="Invia">
+                <input type="reset" value="Cancella">
+            </div>
+
+            
+            
+
+        </form>
+
+
+        <!-- Funzione JavaScript per stampare l'alert -->
+        <script>
+            function stampaAlert() {
+              alert("modulo di contatto inviato");
+            }
+        </script>
+        
+    </body>
+</html>

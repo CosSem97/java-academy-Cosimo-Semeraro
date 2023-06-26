@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="stile.css">
+
+        <title>Pagina 2</title>
+    </head>
+
+    <body>
+
+        <h1>Pagina 2</h1>
+        
+        <p id="p1"></p>
+        <p id="p2"></p>
+        <p id="p3"></p>
+
+        
+        <script>
+            // prendo i dati memorizzati nella memoria localStorage
+            let nome = localStorage.getItem("nome");
+            let cognome = localStorage.getItem("cognome");
+            let eta = localStorage.getItem("eta");
+
+            document.getElementById("p1").innerHTML = nome;
+            document.getElementById("p2").innerHTML = cognome;
+            document.getElementById("p3").innerHTML = eta;
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="stile.css">
+
+        <title>Es_4_pag2</title>
+    </head>
+
+    <body>
+
+        <h1>Pagina 2</h1>
+
+        <span id="span"></span>
+
+
+
+        <script>
+            let parametriPassatiTramiteUrl = new URLSearchParams(window.location.search);
+
+            let urlPassato = parametriPassatiTramiteUrl.get("url");
+
+            document.write("La pagina 1 ha passato a questa pagina questa informazione: " + urlPassato);
+        </script>
+
+
+    </body>
+</html>

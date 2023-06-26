@@ -1,0 +1,10 @@
+.panorama{
+    width: 500px;
+    height: 400px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+}
+
+#div1{
+    border: 3px solid rgb(18, 218, 236);
+}

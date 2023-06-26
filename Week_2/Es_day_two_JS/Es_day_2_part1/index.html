@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stile.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <title>Es_day_2_part1</title>
+    </head>
+
+    <body>
+        <div class="container">
+
+            <!-- Esercizio 1 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>1. calcola la somma di due numeri e stampa il risultato a console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="add(9,7); add(4,5)">Es_1</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Esercizio 2 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>2. calcola la differenza tra due numeri e stampa il risultato a console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="sub(9,7); sub(4,5)">Es_2</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Esercizio 3 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>3. moltiplica due numeri e stampa il risultato a console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="mul(9,7); mul(4,5)">Es_3</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Esercizio 4 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>4. divide due numeri e stampa il risultato a console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="div(9,7); div(4,5)">Es_4</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Esercizio 5 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>5. calcola il resto della divisione tra due numeri e stampa il risultato a console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="resto(3,9); resto(4,5)">Es_5</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Esercizio 6 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>6. calcola la media aritmetica di un insieme di numeri e stampa il risultato a console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="media([8,9,3,9,7]); media([4,5,-3,9,9.8])">Es_6</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Esercizio 7 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>7. verifica se un numero è pari o dispari e stampa il risultato a console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="parita(8); parita(9)">Es_7</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Esercizio 8 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>8. verifica se un numero è maggiore, minore o uguale a un altro numero e stampa il risultato a console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="compare(3,9); compare(5,4)">Es_8</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Esercizio 9 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>9. verifica se una stringa è vuota e stampa il risultato a console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="emptyStr(''); emptyStr('testo')">Es_9</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Esercizio 10 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>10. calcola la somma di due numeri e stampa il risultato a console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="hasSubStr('stringa di prova', 'prova'); hasSubStr('stringa', 'prova')">Es_10</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Esercizio 11 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>11. verifica se una lettera è una vocale o una consonante e stampa il risultato a console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="whichLetter('a'); whichLetter('c')">Es_11</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Esercizio 12 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>12. verifica se un numero è divisibile per 3, 5 o entrambi e stampa il risultato a console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="divisibilePer3o5(9); divisibilePer3o5(90)">Es_12</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Esercizio 13 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>13. crea un array di numeri interi e stampa il risultato a console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="createArray('9,7,8,5,-3'); createArray('4,5,3')">Es_13</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Esercizio 14 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>14. cerca un elemento in un array e stampa il risultato a console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="searchInArray([8,7,9,4,5], 9); searchInArray([8,7,9,4,5], 3)">Es_14</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Esercizio 15 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>15. unisce due array in un unico array e stampa il risultato a console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="joinArray([8,7,9,4,5], [-3,9,7]); joinArray([5,4,3,0], [8,9,7])">Es_15</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Esercizio 16 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>16. estrae un sotto-array da un array (ad esempio solo i numeri pari) e stampa il risultato a console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="subArray([8,7,9,4,5]); subArray([5,4,3,0])">Es_16</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Esercizio 17 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>17. utilizza la funzione .filter() per prendere solo gli elementi maggiori di 5 in array di 10 numeri e stampa il risultato a console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="getElementsGt5([8,7,9,4,5,-3,0,8,3,5]); getElementsGt5([9,3,9,4,5,-3,7,0,3,5])">Es_17</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Esercizio 18 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>18. crea un oggetto con alcune proprietà e stampa il risultato a console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="createObject('Carlo', 'Verdi', 30, 'via dei rossi 89'); createObject('Chiara', 'Carli', 39, 'via dei Verdi 90')">Es_18</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Esercizio 19 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>19. accede a una proprietà di un oggetto e stampa il valore a console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="getObjectName({nome: 'Andrea', cognome: 'Verdi', eta: 50, via: 'via dei rossi 89'}); getObjectName({nome: 'Carla', cognome: 'Sari', eta: 45, via: 'via dei geri 93'})">Es_19</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Esercizio 20 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>20. modifica il valore di una proprietà di un oggetto e stampa il risultato a console, prima e dopo la modifica.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="setObjectName({nome: 'Carlo', cognome: 'Verdi', eta: 30, via: 'via dei rossi 89'}); setObjectEta({nome: 'Carlo', cognome: 'Verdi', eta: 30, via: 'via dei rossi 89'})">Es_20</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Esercizio 21 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>21. invoca una sotto funzione che accetta due numeri e restituisce la loro somma. Stampa il risultato del return nella console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="add2(9,7); add2(4,5)">Es_21</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Esercizio 22 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>22. invoca una sotto funzione che accetta un numero e restituisce il suo valore raddoppiato. Stampa il risultato del return nella console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="double(9); double(8)">Es_22</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Esercizio 23 -->
+            <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>23. invoca una sotto funzione che accetta una stringa e restituisce la sua lunghezza. Stampa il risultato del return nella console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="strLen('Questa è una stringa di prova.'); strLen('prova')">Es_23</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+             <!-- Esercizio 24 -->
+             <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>24. invoca una sotto funzione che accetta una stringa e un carattere e restituisce la posizione del carattere all'interno della stringa. Stampa il risultato del return nella console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="indexOfChar('prova', 'v'); indexOfChar('stringa', 's')">Es_24</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+             <!-- Esercizio 25 -->
+             <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>25. invoca una sotto funzione che accetta due numeri e restituisce il loro valore massimo. Stampa il risultato del return nella console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="max(9,7); max(-3,3)">Es_25</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+             <!-- Esercizio 26 -->
+             <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>26. invoca una sotto funzione che accetta una stringa e restituisce la stringa al contrario. Stampa il risultato del return nella console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="reverseStr('prova'); reverseStr('stringa')">Es_26</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+             <!-- Esercizio 27 -->
+             <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>27. invoca una sotto funzione che accetta un array e restituisce la somma dei suoi elementi. Stampa il risultato del return nella console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="sumArray([8,7,9,4,5]); sumArray([5,4,3,0])">Es_27</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+             <!-- Esercizio 28 -->
+             <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>28. invoca una sotto funzione che accetta un array e restituisce il valore massimo dell'array. Stampa il risultato del return nella console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="maxArray([8,7,9,4,5]); maxArray([5,4,3,0])">Es_28</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+             <!-- Esercizio 29 -->
+             <div class="row">
+                <div class="col-sm-9 my_col">
+                    <span>29. invoca una sotto funzione che accetta due stringhe e restituisce la stringa più lunga. Stampa il risultato del return nella console.</span>
+                </div>
+
+                <div class="col-sm-3 my_col">
+
+                    <!-- div per centrare il bottone al suo interno -->
+                    <div class="center">
+                        <button type="button" onclick="longestStr('prova', 'stringa'); longestStr('questa stringa', 'prova')">Es_29</button>   <!-- Quando viene cliccato il bottone richiamo 2 volte la funzione -->
+                    </div>
+
+                </div>
+            </div>
+
+           
+
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <script src="script.js"></script>
+
+    </body>
+</html>
+
