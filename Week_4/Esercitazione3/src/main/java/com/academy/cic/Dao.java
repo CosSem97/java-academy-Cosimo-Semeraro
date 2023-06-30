@@ -1,12 +1,14 @@
 package com.academy.cic;
 
 import java.util.List;
+import java.util.Set;
 import java.util.logging.Logger;
 
 import javax.persistence.EntityManager;
 import javax.persistence.TypedQuery;
 
 import com.academy.cic.entity.*;
+import com.academy.cic.entity.Module;
 import com.academy.cic.util.JpaUtil;
 
 import org.hibernate.Hibernate;
@@ -43,6 +45,25 @@ private static final Logger logger = Logger.getLogger(Dao.class.getName());
 		try {
 			eM.getTransaction().begin();  // inizio la transazione
 			eM.persist(course); 		  // inserisco il corso nel DB 
+			eM.getTransaction().commit(); // faccio la commit della transazione
+		} catch (Exception e) {
+			eM.getTransaction().rollback(); 
+			e.printStackTrace(); 
+		} finally {
+			eM.close(); 
+		}
+	}
+	
+	
+	
+	public void insertModule(Module module){
+		logger.info("-------- Inserimento di un nuovo modulo nel DB --------");
+		
+		EntityManager eM = JpaUtil.getEntityManagerFactory().createEntityManager();
+	   
+		try {
+			eM.getTransaction().begin();  // inizio la transazione
+			eM.persist(module); 		  // inserisco il modulo nel DB 
 			eM.getTransaction().commit(); // faccio la commit della transazione
 		} catch (Exception e) {
 			eM.getTransaction().rollback(); 
@@ -164,6 +185,54 @@ private static final Logger logger = Logger.getLogger(Dao.class.getName());
 		}
 		
 		return student;
+	}
+	
+	
+	
+	public Course findCourse(int courseId) {
+		logger.info("-------- Ricerca nel DB di un corso, dato il suo id --------");
+		
+		EntityManager eM = JpaUtil.getEntityManagerFactory().createEntityManager();
+		Course course = null;
+		
+		try {
+			course = eM.find(Course.class, courseId);
+			
+			// poichè ho usato il FETCH di tipo EAGER per i modules di un corso, non serve recuperare di nuovo anche i suoi moduli
+			// if(course != null)
+			//	 Hibernate.initialize(course.getModules());
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			eM.close(); 
+		}
+		return course;
+	}
+	
+	
+	
+	public Set<Module> findCourseModules(int courseId) {
+		logger.info("-------- Ricerca nel DB dei moduli di un corso, dato il suo id --------");
+		
+		EntityManager eM = JpaUtil.getEntityManagerFactory().createEntityManager();
+		Set<Module> modules = null;
+		
+		try {
+			Course course = eM.find(Course.class, courseId); // ricerco quel corso nel DB
+			
+			// poichè ho usato il FETCH di tipo LAZY per i modules di un corso, recupero ora anche i suoi moduli
+			if(course != null)
+				Hibernate.initialize(course.getModules());
+			
+			modules = course.getModules();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			eM.close(); 
+		}
+		return modules;
 	}
 }
 

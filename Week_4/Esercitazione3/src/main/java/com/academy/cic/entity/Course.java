@@ -29,7 +29,19 @@ public class Course extends PrimaryKey {
 	@OneToMany(mappedBy = "course", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	private Set<Registration> registrationSet; 	// elenco delle registrazioni di quel corso
 	
+	
+	// Relazione 1 a N tra Course e Module
+	@OneToMany(mappedBy = "course", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private Set<Module> modules;
+	
+	
+	
 	// --- COSTRUTTORI ---
+	public Course(String name, Set<Module> modules) {
+		this.name = name;
+		this.modules = modules;
+	}
+	
 	public Course(String name) {
 		this.name = name;
 	}
@@ -56,6 +68,16 @@ public class Course extends PrimaryKey {
 	public void setRegistrationSet(Set<Registration> registrationSet) {
 		this.registrationSet = registrationSet;
 	}
+	
+	public Set<Module> getModules() {
+		return modules;
+	}
+
+	public void setModules(Set<Module> modules) {
+		this.modules = modules;
+	}
+	
+	
 
 	@PrePersist
 	public void logNewCourseAttempt() {
@@ -67,10 +89,38 @@ public class Course extends PrimaryKey {
 	    logger.info("Inserito nel DB il nuovo corso " + name + " con id: " + super.getId());
 	}
 
+	
+	
 	@Override
 	public String toString() {
 		return "Corso ---> id: " + super.getId()
-				+ ", nome: " + name;
+				+ ", nome: " + name
+				+ ", modules: " + modules.toString();
 	}
+	
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + super.getId();
+		result = prime * result + ((modules == null) ? 0 : modules.hashCode());
+		result = prime * result + ((name == null) ? 0 : name.hashCode());
+		return result;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Course other = (Course) obj;
+		if (super.getId() != other.getId())
+			return false;
+		return true;
+	}
+
 	
 }

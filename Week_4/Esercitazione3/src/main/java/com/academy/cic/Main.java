@@ -3,6 +3,7 @@ package com.academy.cic;
 import java.util.List;
 
 import com.academy.cic.entity.*;
+import com.academy.cic.entity.Module;
 
 public class Main {
 
@@ -35,6 +36,15 @@ public class Main {
 		dao.insertCourse(c1);
 		dao.insertCourse(c2);
 		dao.insertCourse(c3);
+		
+		
+		
+		// creo dei moduli
+		Module m1 = new Module("Modulo1", "Teacher1", c1);
+		Module m2 = new Module("Modulo2", "Teacher1", c1);
+		Module m3 = new Module("Modulo3", "Teacher2", c1);
+		Module m4 = new Module("Modulo4", "Teacher3", c2);
+		Module m5 = new Module("Modulo5", "Teacher3", c3);
 		
 		
 		
